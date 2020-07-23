@@ -1,0 +1,28 @@
+{% extends "feeds/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="content-section">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Resolve Privacy warning!</strong> You dont have to give your Real name in the username. It's your choice. you can be <strong>anonymous</strong> in Resolve. <strong>Email will not be visible to anyone.</strong>
+</div>
+<h5 class="text-muted headeralign">A place to share problems, get solutions and understand the world!</h5>
+    <form method="POST">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Join Now</legend>
+              {{ form|crispy }}
+          </fieldset>
+          <div class="form-group">
+            <div>
+              <small class="text-muted">By clicking Sign Up, you agree to our <a href="{% url 'feeds-terms' %}">Terms</a> and <a href="{% url 'feeds-privacy' %}">Data Policy</a>.</small>
+            </div>
+            <button class="btn btn-success btn1029" type="submit">Sign Up</button> <a class="btn btn-primary btn1029" href="{% url 'feeds-faq' %}">FAQ</a>
+          </div>
+    </form>
+    <div class="border-top pt-3">
+      <small class="text-muted">
+        Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Login</a>
+      </small>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends "feeds/base.html" %}
+{% block content %}
+<div>
+    <h3><span class="heardertitle">Careers in Resolve</span></h3>
+</div>
+      <div>
+        <article>
+             <div class="media-body">
+               <div class="article-metadata">
+               </div>
+                 <h5>Join to work with us</h5>
+                 <p>Resolve’s mission is to share the Problems and grow the world’s solutions. A vast amount of the solutions that would be valuable to many people is
+                     currently only available to a few — either locked in people’s heads, or only accessible to some groups. We want to connect the people who have solutions to the people
+                     who need it, to bring together people with different prospective's of solutions for different types of problems so they can understand each other better, and to empower
+                     everyone to share their problems for the benefit of the rest of the world. If you are interested to work with us. Punch on apply, send the fuckin E-Mail.</p>
+                 <h5>Important Key Points Of Gotindia Company.</h5>
+                 <ui>
+                     <li>Every Human's Hungry is <strong>Equal</strong> , we earn to eat, to buy basic needs, for good lifestyle.</li>
+                     <li>No Degree Needed, No fucking certification Needed <strong>[Conditions Applied]</strong></li>
+                     <li>We encourage TALENT, SMART WORKING, BETTER THINKING</li>
+                     <li>No Racism, No Gender Discrimination, No Fuckin Politics</li>
+                     <li>Atitude is Everything, but we don't tolerate Bad behaviour</li>
+                 </ui>
+                <br>
+                 {% for post in posts %}
+              <div> <h3 class="articlemargin"><a class="article-title" href="#">{{ post.title }}</a></h3></div>
+              <div class="readmorebtn">
+                <a class="btn btn-primary" data-toggle="collapse" href="#one" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Read More
+                </a>
+              </div>
+                    <div class="collapse" id="one">
+                      <div class="card card-body">
+                       <div><p>{{ post.content|safe }}</p></div>
+                           <a class="btn btn-primary" href="mailto:careers@resolve.tips">Apply</a>
+                      </div>
+                    </div>
+                  {% endfor %}
+             </div>
+        </article>
+          <div class="alert alert-danger infoalert text123" role="alert">
+             Sorry! No Openings Yet :(
+          </div>
+      </div>
+
+{% endblock content %}

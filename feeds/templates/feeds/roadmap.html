@@ -1,0 +1,27 @@
+{% extends "feeds/base.html" %}
+{% block content %}
+<div>
+    <h4><span class="heardertitle">Resolve's RoadMap</span></h4>
+</div>
+	<div class="alert alert-info infoalert" role="alert">
+        We launched on Aug 1 - 2020 with basic Version 1.0.0.3. Only with few features. There will be many features to come. We are still in the tip of an Ice Berg. Please support us.
+    </div>
+<article>
+  <div class="container mb-5">
+	<div class="row">
+		<div class="col-md-9 offset-md-1">
+
+			<ul class="timeline">
+        {% for post in posts %}
+				<li>
+					<span class="timeline-title">{{ post.title }}</span>
+					<small class="text-muted float-right">{{ post.date_posted|date:"F d Y H:i" }}</small>
+					<p>{{ post.content }}</p>
+				</li>
+        {% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+</article>
+{% endblock content %}
