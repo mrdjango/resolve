@@ -1,15 +1,18 @@
 {% extends "feeds/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+     <div class="alert alert-primary" role="alert">
+        Its your choice. You don't have to upload your Real Photo. <a href="{% url 'feeds-privacy' %}" class="alert-link">Read our Privacy Policy</a>
+     </div>
 <div class="content-section">
-  <div class="alert alert-primary" role="alert">
-  Its your choice. You don't have to upload your Real Photo. <a href="{% url 'feeds-privacy' %}" class="alert-link">Read our Privacy Policy</a>
-</div>
      <div class="resolveprofile">
-        <div class="media">
-            <img class="rounded-circle mx-auto d-block border border-success account-img" src="{{ user.profile.image.url }}">
+        <div class="bgcoverpic">
+            <div class="media">
+              <img class="rounded-circle mx-auto d-block border border-success account-img" src="{{ user.profile.image.url }}">
+            </div>
         </div>
-        <div class="media-body">
+
+        <div class="media-body userdetail">
             <h2 class="account-heading usernamerslv">@{{ user.username }}</h2>
             <p class="text-secondary">{{ user.email }}</p>
         </div>

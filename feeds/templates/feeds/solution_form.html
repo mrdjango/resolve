@@ -1,13 +1,14 @@
 {% extends "feeds/base.html" %}
 {% load crispy_forms_filters %}
-
-{% block title %}Add Solution{% endblock title %}
-
 {% block content %}
-    <h1>Give Solution</h1>
+<div class="content-section">
     <form method="post">
         {% csrf_token %}
-        {{ form|crispy }}
-        <button class="btn btn-success btn1029 postsolution" type="submit">Post Solution</button>
+         <fieldset class="form-group">
+             <legend class="border-bottom mb-4">Give Solution</legend>
+             {{ form|crispy }}
+         </fieldset>
+        <button class="btn btn-success btn1029 postproblem" type="submit">Post Solution</button>
     </form><br><br>
+</div>
 {% endblock content %}

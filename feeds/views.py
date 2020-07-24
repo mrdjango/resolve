@@ -81,7 +81,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class SolutionCreateView(LoginRequiredMixin, CreateView):
     model = Solution
     template = 'feeds/solution_form.html'
-    fields = ('solution',)
+    fields = ['solution']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
