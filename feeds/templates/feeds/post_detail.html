@@ -4,7 +4,7 @@
       <h5> Problem </h5>
 </div>
 <article class="media content-section">
-    <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+    <img class="rounded-circle border border-success article-img" src="{{ object.author.profile.image.url }}">
     <div class="media-body">
       <div class="article-metadata">
         <a class="mr-2 linktext" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
@@ -24,15 +24,12 @@
           </div>
     </div>
   </article>
-    <hr>
     <div class="article-metadata">
         <h5>{{ post.solutions.count }}{{ post.solutions|pluralize }} Solutions</h5>
-
     </div>
-
         {% for solution in post.solutions.all %}
           <article class="media content-section">
-          <img class="rounded-circle article-img" src="{{ solution.author.profile.image.url }}">
+          <img class="rounded-circle border border-success article-img" src="{{ solution.author.profile.image.url }}">
             <div class="media-body">
               <div class="article-metadata">
                 <a class="mr-2 linktext" href="{% url 'user-posts' solution.author.username %}">{{ solution.author }}</a>
@@ -47,7 +44,6 @@
                 </div>
             </div>
           </article>
-
         {% empty %}
       <article class="media content-section">
             <h6 class="nosolutions">No Solutions here yet :(</h6>

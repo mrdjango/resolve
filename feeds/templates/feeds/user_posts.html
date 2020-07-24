@@ -3,7 +3,7 @@
 <h6 class="mb-3 resolveh6">Problems of <a class="profilelink" href="#">{{ view.kwargs.username }}</a> - [{{ page_obj.paginator.count }}]</h6>
   {% for post in posts %}
       <article class="media content-section">
-        <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+        <img class="rounded-circle border border-success article-img" src="{{ post.author.profile.image.url }}">
         <div class="media-body">
           <div class="article-metadata">
             <a class="mr-2 linktext" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
