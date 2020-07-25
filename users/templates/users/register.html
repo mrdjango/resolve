@@ -1,11 +1,11 @@
 {% extends "feeds/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-  <div class="content-section">
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Resolve Privacy warning!</strong> You dont have to give your Real name in the username. It's your choice. you can be <strong>anonymous</strong> in Resolve. <strong>Email will not be visible to anyone.</strong>
-</div>
-<h5 class="text-muted headeralign">A place to share problems, get solutions and understand the world!</h5>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Resolve Privacy warning!</strong> You dont have to give your Real name in the username. It's your choice. you can be <strong>anonymous</strong> in Resolve. <strong>Email will not be visible to anyone.</strong>
+      </div>
+<div class="content-section">
+<h5 class="text-muted headeralign">A place to share problems, get solutions and understand the world!</h5><br>
     <form method="POST">
           {% csrf_token %}
           <fieldset class="form-group">

@@ -1,6 +1,9 @@
 {% extends "feeds/base.html" %}
 {% load crispy_forms_filters %}
 {% block content %}
+ <div class="alert alert-info infoalert" role="alert">
+        Give solutions or suggestions or advices or tips for the problem you just selected. Your friend is waiting for your solution.
+ </div>
 <div class="content-section">
     <form method="post">
         {% csrf_token %}
