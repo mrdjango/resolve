@@ -55,7 +55,7 @@
        <div class="col-md-8">
          {% if messages %}
             {% for message in messages %}
-              <div class="alert alert-{{ message.tags }}">
+              <div id="msg" class="alert alert-{{ message.tags }}">
                   {{ message }}
               </div>
             {% endfor %}
@@ -123,6 +123,14 @@
           });
       });
       </script>
+
+        <script>
+            setTimeout(function(){
+                if ($('#msg').length > 0) {
+                    $('#msg').remove();
+                }
+            }, 7000)
+        </script>
 
     </body>
 </html>

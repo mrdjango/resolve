@@ -25,7 +25,7 @@
     </div>
   </article>
     <div class="article-metadata">
-        <h5>{{ post.solutions.count }}{{ post.solutions|pluralize }} Solutions</h5>
+        <h5>Solutions - [{{ post.solutions.count }}{{ post.solutions|pluralize }}]</h5>
     </div>
         {% for solution in post.solutions.all %}
           <article class="media content-section">
