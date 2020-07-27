@@ -1,6 +1,5 @@
 body {
-  background: rgb(241, 242, 242);
-  color: #333333;
+  color: #000;
   margin-top: 5rem;
   font-family: 'Hind Guntur', sans-serif;
 }
@@ -218,7 +217,7 @@ ul.timeline > li:before {
 .abtrlv-para1{
   font-size: 20px;
   text-align: center;
-  margin: 20px;
+  margin: 35px;
 }
 
 
@@ -338,7 +337,7 @@ font-weight: bold;
 }
 
 .bgcoverpic{
-    background-color: #f7f7f7;
+    background-color: #fdfbfb;;
     border-radius: 5px;
 }
 
@@ -362,4 +361,17 @@ font-weight: bold;
 
 .verifymail:hover{
     color:#fff;
+}
+
+.faqpara{
+    line-height: 35px;
+}
+
+.usernamerslv:hover{
+    text-decoration: none;
+    color: #0e771f;
+}
+
+.card-header{
+    background-color: #fff;
 }

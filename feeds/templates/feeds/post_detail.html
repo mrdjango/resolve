@@ -14,7 +14,7 @@
       <p class="article-content">{{ object.content|safe }}</p>
           <div class="resolvebtn">
             {% if user.is_authenticated %}
-              <a class="btn btn-success btn-sm btn1029 mt-1 mb-1" href="{% url 'solution_form' object.id %}">Give Solution</a>&nbsp;
+              <a class="btn btn-success btn-sm btn1029 mt-1 mb-1" target="_blank" href="{% url 'solution_form' object.id %}">Give Solution</a>&nbsp;
             {% if object.author == user %}
             <a class="btn btn-dark btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"              width="25px" height="25px"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02                     0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></a>
             <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"                width="25px" height="25px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1                              1H5v2h14V4z"/></svg></a>&nbsp;
@@ -23,10 +23,12 @@
           {% endif %}
           </div>
     </div>
-  </article>
-    <div class="article-metadata">
-        <h5>Solutions - [{{ post.solutions.count }}{{ post.solutions|pluralize }}]</h5>
-    </div>
+</article>
+
+
+<div class="article-metadata">
+    <h5>Solutions - [{{ post.solutions.count }}{{ post.solutions|pluralize }}]</h5>
+</div>
         {% for solution in post.solutions.all %}
           <article class="media content-section">
           <img class="rounded-circle border border-success article-img" src="{{ solution.author.profile.image.url }}">

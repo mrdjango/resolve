@@ -14,8 +14,7 @@
 			<ul class="timeline">
        	 {% for post in posts %}
 				<li>
-					<span class="timeline-title">{{ post.title }}</span>
-					<small class="text-muted float-right">{{ post.date_posted|date:"F d Y H:i" }}</small>
+					<span class="timeline-title">{{ post.date_posted|date:"F d Y" }} - {{ post.title }}</span>
 					<p>{{ post.content }}</p>
 				</li>
         	{% endfor %}
