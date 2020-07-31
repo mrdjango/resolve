@@ -200,13 +200,13 @@ ul.timeline > li:before {
     z-index: 400;
 }
 .timeline-title{
-  color: #0889f1;
+  color: #000;
   font-size: 26px;
   font-weight: 600;
 }
 
 .timeline-time{
-  color: #ff0000;
+  color: #0889f1;
     font-size: 23px;
   font-weight: bold;
 }
@@ -241,7 +241,7 @@ ul.timeline > li:before {
   color:#000;
 }
 .text-collapse{
-color: #007bff;
+color: #000;
 font-weight:600;
 }
 
@@ -306,11 +306,7 @@ font-weight: bold;
   padding: 8.3px;
 }
 
-.postsolution{
-    float: right;
-}
-
-.postproblem{
+.postupdate-btn{
     float: right;
 }
 
