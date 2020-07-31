@@ -193,14 +193,21 @@ ul.timeline > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #ff0202;
-    left: 20px;
-    width: 20px;
-    height: 20px;
+    border: 5px solid #ff0202;
+    left: 10px;
+    width: 40px;
+    height: 40px;
     z-index: 400;
 }
 .timeline-title{
   color: #0889f1;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.timeline-time{
+  color: #ff0000;
+    font-size: 23px;
   font-weight: bold;
 }
 
@@ -217,7 +224,7 @@ ul.timeline > li:before {
 .abtrlv-para1{
   font-size: 20px;
   text-align: center;
-  margin: 35px;
+  margin: 3px;
 }
 
 
@@ -337,7 +344,7 @@ font-weight: bold;
 }
 
 .bgcoverpic{
-    background-color: #fdfbfb;;
+    background-color: #fdfbfb;
     border-radius: 5px;
 }
 
@@ -374,4 +381,18 @@ font-weight: bold;
 
 .card-header{
     background-color: #fff;
+}
+
+.roadmapcontent{
+    font-size: 18px;
+    line-height:1.7;
+    color: #494949;
+}
+
+.backgron{
+    background-color: #ddd;
+    padding:20px 20px 20px 20px;
+    border-radius:3px;
+    color: #ff0000;
+    font-size: 23px;
 }

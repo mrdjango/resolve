@@ -9,7 +9,7 @@
             <a class="mr-2 linktext" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
             <small class="text-muted">{{ post.date_posted|timesince }} ago</small>
           </div>
-          <h2 class="articlemargin"><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+          <h2 class="articlemargin"><a class="article-title" href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
           <p class="article-content">{{ post.content|safe }}</p>
         </div>
       </article>

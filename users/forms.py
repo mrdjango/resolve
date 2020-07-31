@@ -5,21 +5,26 @@ from .models import Profile
 
 
 class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField(max_length=100)
+    email = forms.EmailField(max_length=150)
 
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
 
-def clean(self, *args, **kwargs):
-    email = self.clean_data.get('email')
-    email_qs = User.objects.filter(email=email)
-    if email_qs.exists():
-        raise forms.ValidationError(
-            "Email you entered is already exists!"
-        )
-    return super(UserRegisterForm, self).clean(*args, **kwargs)
+def clean_email(self):
+    # Get the email
+    email = self.cleaned_data.get('email')
+
+    # Check to see if any users already exist with this email as a username.
+    try:
+        match = User.get(email=email)
+    except User.DoesNotExist:
+        # Unable to find a user, this is fine
+        return email
+
+    # A user was found with this as a username, raise an error.
+    raise forms.ValidationError('This email address is already in use.')
 
 
 class UserUpdateForm(forms.ModelForm):
@@ -27,16 +32,7 @@ class UserUpdateForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email']
-
-        def clean(self, *args, **kwargs):
-            email = self.clean_data.get('email')
-            email_qs = User.objects.filter(email=email)
-            if email_qs.exists():
-                raise forms.ValidationError(
-                    "Email you entered is already exists!"
-                )
-            return super(UserRegisterForm, self).clean(*args, **kwargs)
+        fields = ['email']
 
 
 class ProfileUpdateForm(forms.ModelForm):

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 from django.views.generic import (
     ListView,
     DetailView,
@@ -23,14 +24,13 @@ class PostListView(ListView):
     template_name = 'feeds/home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
-    paginate_by = 37
 
 
 class UserPostListView(ListView):
     model = Post
     template_name = 'feeds/user_posts.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
-    paginate_by = 37
+
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
@@ -83,8 +83,18 @@ class SolutionCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        form.instance.post = Post.objects.get(pk=self.kwargs['post_pk'])
+        form.instance.post = Post.objects.get(pk=self.kwargs['slug'])
         return super().form_valid(form)
+
+
+def PostView(request,slug):
+    post = Post.objects.filter(slug=slug)
+
+    if post.exists():
+        post = post.first()
+    else:
+        return HttpResponse("<h2> Page Not Found</h3>")
+    return render(request, 'page_detail.html', {'post':post})
 
 
 def givesolution(request):

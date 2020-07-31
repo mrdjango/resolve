@@ -4,22 +4,57 @@
     <h4><span class="heardertitle">Resolve's RoadMap</span></h4>
 </div>
 	<div class="alert alert-info infoalert" role="alert">
-        We launched on Aug 1 - 2020 with basic Version 1.0.0.3. Only with few features. There will be many features to come. We are still in the tip of an Ice Berg. Please support us.
+       Only with few features. There will be many features to come. We are still in the tip of an Ice Berg. Please support us.
     </div>
 <article class="media content-section">
 	<div class="container mb-5">
 		<div class="row">
 			<div class="col-md-9 offset-md-1">
-
-			<ul class="timeline">
-       	 {% for post in posts %}
+				<ul class="timeline">
 				<li>
-					<span class="timeline-title">{{ post.date_posted|date:"F d Y" }} - {{ post.title }}</span>
-					<p>{{ post.content }}</p>
+					<span class="timeline-title">Our Story</span>
+					<p class="roadmapcontent">With our roots as the solutions that can solve People's Problems, we’ve expanded what we do to solve someone's problem no matter what they have. Check out our story.</p>
 				</li>
-        	{% endfor %}
 			</ul>
 			</div>
+			<div class="col-md-9 offset-md-1">
+				<span class="timeline-time">June 2018</span>
+				<ul class="timeline">
+				<li>
+					<span class="timeline-title">Idea Flashed</span>
+					<p class="roadmapcontent">Small idea that flashed in exam hall, while writing a blacklog subject Electronics and Devices. Honestly, Don't know any answer for any question.</p>
+				</li>
+			</ul>
+			</div>
+			<div class="col-md-9 offset-md-1">
+				<span class="timeline-time">June 14 2020</span>
+				<ul class="timeline">
+				<li>
+					<span class="timeline-title">Started Coding</span>
+					<p class="roadmapcontent"><pre class="backgron"><code>print('Hello, world!')</code></pre></p>
+				</li>
+			</ul>
+			</div>
+			<div class="col-md-9 offset-md-1">
+				<span class="timeline-time">July 27 2020</span>
+				<ul class="timeline">
+				<li>
+					<span class="timeline-title">Coded Version #1</span>
+					<p class="roadmapcontent">Within 1 month 13 days, Hatched out basic version of Project Resolve. With only few important features that are really necessary!. </p>
+				</li>
+			</ul>
+			</div>
+			{% for post in posts %}
+			<div class="col-md-9 offset-md-1">
+				<span class="timeline-time">{{ post.date_posted|date:"F d Y" }}</span>
+				<ul class="timeline">
+				<li>
+					<span class="timeline-title">{{ post.title }}</span>
+					<p class="roadmapcontent">{{ post.content }}</p>
+				</li>
+			</ul>
+			</div>
+			{% endfor %}
 		</div>
 	</div>
 </article>
