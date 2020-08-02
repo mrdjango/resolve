@@ -84,12 +84,10 @@ DATABASES = {
         'NAME': 'resolve_rslv_db',
         'USER': 'mrdjangoultimate',
         'PASSWORD': 'Dani$Denials1000%HOT3477',
-        'HOST': 'gotindiainstance.cqhybwzatomc.ap-south-1.rds.amazonaws.com',
+        'HOST': 'resolverslvinstance.cjvo9gcvntbm.us-west-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
