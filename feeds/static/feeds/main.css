@@ -1,11 +1,12 @@
 body {
   color: #000;
+  background-color: #1f2227;
   margin-top: 5rem;
   font-family: 'Hind Guntur', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #000;
+    color: #fff;
 }
 ul {
   margin: 0;
@@ -69,7 +70,12 @@ text-align: justify;
   text-align: center;
 }
 
+.form-control{
+    background-color: #2d2d2d;
+}
+
 .version{
+  background-color: #000;
   color: #0e771f;
   text-align: center;
 }
@@ -87,7 +93,8 @@ text-align: justify;
 }
 
 .content-section {
-  background: #ffffff;
+  background: #292929;
+  color: #fff;
   padding: 10px 20px;
   border: 1px solid #ddd;
   border-radius: 3px;
@@ -99,7 +106,7 @@ text-align: justify;
 }
 
 .article-title {
-  color: #444444;
+  color: #fb5353;
   font-size:18px;
   font-weight: 600;
 }
@@ -200,7 +207,7 @@ ul.timeline > li:before {
     z-index: 400;
 }
 .timeline-title{
-  color: #000;
+  color: #d0d0d0;
   font-size: 26px;
   font-weight: 600;
 }
@@ -238,7 +245,7 @@ ul.timeline > li:before {
 
 .headeralign{
   text-align: center;
-  color:#000;
+  color:#fff;
 }
 .text-collapse{
 color: #000;
@@ -260,10 +267,9 @@ font-weight: bold;
    text-align:center;
    color:#000088;
    padding:30px 10px 30px 10px;
-   background: rgb(25,126,9);
    border:#000;
    border-radius: 5px;
-   background: linear-gradient(360deg, rgba(25,126,9,1) 0%, rgba(255,255,255,1) 54%, rgba(255,128,0,1) 100%);
+
 }
 
 /* Basic input element using psuedo classes */ /* solution */
@@ -340,7 +346,7 @@ font-weight: bold;
 }
 
 .bgcoverpic{
-    background-color: #fdfbfb;
+    background-color: #333333;
     border-radius: 5px;
 }
 
@@ -382,7 +388,7 @@ font-weight: bold;
 .roadmapcontent{
     font-size: 18px;
     line-height:1.7;
-    color: #494949;
+    color: #dadada;
 }
 
 .backgron{
